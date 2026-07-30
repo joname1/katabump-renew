@@ -1176,7 +1176,7 @@ async function solveTurnstileIfPresent(page, stageName = "通用", maxAttempts =
 //   click_no_effect            // 点击发出但 frame/URL 无变化，token=0
 //   challenge_progress_no_token // 点击后 frame 有变化/消失，但最终 token=0
 async function solveLoginTurnstile(page, totalTimeoutMs = 180000) {
-    const maxAttempts = 3;
+    const maxAttempts = 10;
     let attempt = 0;
     let lastState = 'turnstile_widget_not_ready';
     const overallStart = Date.now();
